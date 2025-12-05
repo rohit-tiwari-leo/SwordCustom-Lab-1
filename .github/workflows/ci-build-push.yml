@@ -21,10 +21,10 @@ jobs:
       - name: Azure CLI login to ACR
         run: |
           az acr login --name crcos2rtoxytweo
-
+      
       - name: Build Docker Image
         run: |
-          docker build . -t crcos2rtoxytweo.azurecr.io/eshoponweb/web:latest
+           docker build -f src/Web/Dockerfile src/Web -t crcos2rtoxytweo.azurecr.io/eshoponweb/web:latest
 
       - name: Push Docker Image
         run: |
