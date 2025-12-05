@@ -14,8 +14,9 @@ jobs:
       - name: Trigger Azure Pipelines pipeline
         uses: Azure/pipelines@v1
         with:
-          azure-devops-project-url: "https://dev.azure.com/ADOCourseOrg04/eShopOnWeb-57400316"
-          azure-pipeline-name: "lab-azdo-cli-pipeline"
+          azure-devops-project-url: "https://dev.azure.com/ADOCourseOrg04/eShopOnWeb-57400316"          
+          azure-pipeline-name: "eshoponweb-ci-docker"
+          # azure-pipeline-name: "lab-azdo-cli-pipeline"
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_PAT }}
           azure-pipeline-variables: |
             triggeredBy=GitHubActions
